@@ -106,22 +106,21 @@ public class RunExperimentMainApp {
             for (int i = 0; i < trials; i++) {
                 if (!tryLuck()) {
                     survived = false;
-                    logInfo("Simulation {0}. Survived {1} trials.", simulationCount, i);
+                    logInfo("Simulation {0}. Survived {1} trials. Time elapsed: {2} ns", simulationCount, i, System.nanoTime() - simulationStartTime);
                     break;
                 }
             }
             if (survived) {
-                logInfo("Survived all {0} trials, which was a {1}^{2} probability, this kind of proves the possibility for quantum immortality!", trials);
+                logInfo("Survived all {0} trials, which was a 0.2^{0} probability, this kind of proves the possibility for quantum immortality!", trials);
                 logInfo("Total time elapsed for this simulation: {0} ns", System.nanoTime() - simulationStartTime);
                 break;
             }
-            logInfo("Did not survive, restarting simulation. Time elapsed: {0} ns", System.nanoTime() - simulationStartTime);
         }
 
     StringBuilder finalMsg = new StringBuilder();
     finalMsg.append("\n==================================================================================\n");
     finalMsg.append("Congratulations! You have successfully simulated the most rarest scenario that suggests quantum immortality.");
-    finalMsg.append(MessageFormat.format("Your chances were 1 in 0.2^{0}. And you did it. Was this worth your time?\n", trials));
+    finalMsg.append(MessageFormat.format("Your chances were 0.2^{0}. And you did it. Was this worth your time?\n", trials));
     finalMsg.append(MessageFormat.format("Total simulations run: {0}.\nTotal time elapsed: {1} ms\n", simulationCount, System.currentTimeMillis() - experimentStartTime)); // I don't think experiment would run for 292 million years, we should be good.
     finalMsg.append("This simulation is purely theoretical and should not be taken as a real-life proof of quantum immortality.\n");
     finalMsg.append("Always prioritize safety and well-being in real life over theoretical concepts.\n");
