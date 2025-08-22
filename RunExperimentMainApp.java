@@ -92,7 +92,7 @@ public class RunExperimentMainApp {
         initLogs();
         logToFile("\n\n#################################################################################\n\n");
         
-        // Number of trials to simulate. Higher, the better for proof, but also more probability for time-consumed and failure.
+        // Number of trials to simulate. Higher, the better for proof, but also higher probability for failures, and exponential growth in time and storage consumption.
         long trials = 100;
         BigInteger simulationCount = BigInteger.ZERO;
 
