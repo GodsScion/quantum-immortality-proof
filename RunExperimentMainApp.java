@@ -5,7 +5,7 @@
  * 
  * Disclaimer:
  * This program is provided for educational and theoretical purposes only.
- * The authors and contributors of this program are not liabile for any direct or indirect consequences
+ * The authors and contributors of this program are not liable for any direct or indirect consequences
  * arising from the interaction, use, misuse or any activity involving directly or indirectly of this program, or related programs, or related topics.
  * Use this program at your own risk.
  * This simulation is purely theoretical and the authors do not endorse any harmful behavior
@@ -64,6 +64,7 @@ public class RunExperimentMainApp {
             fileWriter.close();
         } catch (IOException e) {
             System.err.println("Failed to log message: " + e.getMessage());
+            logger.severe(e.getMessage());
         }
     }
 
@@ -128,7 +129,7 @@ public class RunExperimentMainApp {
     finalMsg.append("Have a great day!\n");
     logToFile(finalMsg.toString());
 
-    
+    logger.info("Experiment ended. Exiting program. Thank you for participating!");
 
     logToFile("\n\n#################################################################################\n\n");
     System.exit(0);
