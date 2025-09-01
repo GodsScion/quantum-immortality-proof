@@ -1,5 +1,5 @@
 # Quantum Immortality Proof
-A simple program that runs the experiment for proof of Quantum Immortality.
+A simple program that works on the concept of Infinite Monkey Theorem, runs the experiment for proof of Quantum Immortality.
 Won't stop until the impossible is achieved!
 
 
